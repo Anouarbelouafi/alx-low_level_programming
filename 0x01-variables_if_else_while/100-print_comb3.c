@@ -1,29 +1,29 @@
 #include <stdio.h>
 
 /**
- * main -Inventing is a combination of brains and materials.
- * The more brains you use, the less material you need
- *
- * Return: zero
+ * main - prints all possible different combinations of two digits
+ * Return: ALways 0 (Success)
  */
 int main(void)
 {
-	int i;
-	int y;
+	int n, m;
 
-	for (i = 48 ; i <= 57 ; i++)
+	for (n = 48; n <= 56; n++)
 	{
-		for (y = 48 ; y <= 57 ; y++ )
+		for (m = 49; m <= 57; m++)
 		{
-			putchar(i);
-			puthcar(y);
-			if (i > 57)
+			if (m > n)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(n);
+				putchar(m);
+				if (n != 56 || m != 57)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
-	putchar(10);
+	putchar('\n');
 	return (0);
 }
